@@ -393,7 +393,7 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="/gallery" class="nav-link">Gallery</a>
                 </li>
                 <li class="nav-item">
                     <a href="/contact-us" class="nav-link">Contact</a>

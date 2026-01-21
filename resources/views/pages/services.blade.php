@@ -10,7 +10,7 @@
 
 
 .services-hero {
-    background: linear-gradient(rgba(0, 86, 179, 0.85), rgba(32, 139, 230, 0.9)), 
+    background: linear-gradient(#990000, rgba(0, 87, 179, 0.73)), 
                 url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') 
                 center/cover no-repeat;
     min-height: 35vh;

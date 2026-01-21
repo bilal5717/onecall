@@ -206,7 +206,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
-                <h1 class="fw-bold display-5 mb-4">About OneCall Technical Services</h1>
+                <h1 class="fw-bold display-5 mb-4">Contact OneCall Technical Services</h1>
                 <p class="fs-5 lh-lg mb-4">
                     Your trusted partner for professional technical services in Dubai. We provide reliable, affordable, and high-quality electrical, plumbing, AC, and complete home maintenance solutions for residential and commercial properties.
                 </p>

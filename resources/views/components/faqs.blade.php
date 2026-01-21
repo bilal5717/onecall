@@ -1,12 +1,6 @@
 <!-- FAQ Section - Light Glassmorphism Design -->
 <section class="py-5 position-relative" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);">
-    <!-- Background Elements -->
-    <div class="position-absolute top-0 start-0 w-100 h-100 overflow-hidden" style="z-index: 0;">
-        <div class="position-absolute" style="top: 15%; right: 10%; width: 200px; height: 200px; background: radial-gradient(circle, rgba(77, 171, 247, 0.1) 0%, transparent 70%);"></div>
-        <div class="position-absolute" style="bottom: 25%; left: 5%; width: 180px; height: 180px; background: radial-gradient(circle, rgba(153, 0, 0, 0.05) 0%, transparent 70%);"></div>
-        <!-- Grid Pattern Overlay -->
-        <div class="position-absolute top-0 start-0 w-100 h-100" style="background-image: linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px); background-size: 50px 50px;"></div>
-    </div>
+    
 
     <div class="container position-relative" style="z-index: 1;">
         <!-- Section Header -->
@@ -16,12 +10,7 @@
                 <i class="bi bi-question-circle-fill me-2"></i>
                 Need Help? We Have Answers
             </span>
-            <h2 class="section-title mb-4 animated-element" style="color: #2c3e50; font-size: 2.8rem; font-weight: 800;">
-                Frequently Asked <span style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Questions</span>
-            </h2>
-            <p class="lead-description mx-auto animated-element" style="max-width: 600px; color: #5d6d7e; font-size: 1.1rem; line-height: 1.8;">
-                Get answers to common questions about our Dubai services
-            </p>
+          
         </div>
 
         <div class="row g-4 g-lg-5">

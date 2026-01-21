@@ -8,16 +8,16 @@
 
 <style>
     :root {
-        --ac-blue: #0066cc;
+        --ac-blue: #990000;
         --ac-light-blue: #e6f2ff;
         --ac-green: #00a859;
         --ac-orange: #ff6b35;
-        --ac-dark: #1a365d;
+        --ac-dark: #000000;
     }
 
     /* Hero Section */
     .ac-hero {
-        background: linear-gradient(rgba(0, 102, 204, 0.9), rgba(0, 102, 204, 0.95)),
+        background: linear-gradient(#990000, rgba(0, 87, 179, 0.73)),
                     url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
         background-size: cover;
         background-position: center;
