@@ -17,17 +17,20 @@
     }
     
     /* Gallery Header */
-    .gallery-header {
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                    url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
-        background-size: cover;
-        background-position: center;
-        color: white;
-        padding: 100px 0;
-        text-align: center;
-        margin-bottom: 60px;
-        position: relative;
-    }
+   .gallery-header {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('./images/bgimages/banner.jpg');
+    background-size: cover;
+    background-position: top center; /* 👈 yahan change */
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+
     
     .gallery-header::after {
         content: '';
@@ -360,6 +363,34 @@
             description: "Commercial building AC system installation in Downtown Dubai",
             image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
         },
+         {
+            id: 1,
+            category: "ac",
+            title: "Exhaust Ventilation System",
+            description: "Removes stale, polluted indoor air to create negative pressure",
+            image: "https://cdn.stamped.io/tr:h-800:/uploads/photos/248540_1920693370922_4d067d37_47ed_4cf5_ae15_1a78dce26dcb.jpg"
+        },
+         {
+            id: 1,
+            category: "ac",
+            title: "Supply Ventilation System",
+            description: "Actively brings filtered fresh outdoor air into the building",
+            image: "https://idealfix.sa/wp-content/uploads/2023/09/close-up-heat-pump-outside-home-1024x731.jpg"
+        },
+         {
+            id: 1,
+            category: "ac",
+            title: "Balanced Ventilation System",
+            description: "Simultaneously supplies fresh air and exhausts stale air",
+            image: "https://assets.thehansindia.com/h-upload/2023/10/15/1389598-air-conditioning.webp"
+        },
+          {
+            id: 1,
+            category: "ac",
+            title: "Heat Recovery Ventilation (HRV) System",
+            description: "Simultaneously supplies fresh air and exhausts stale air",
+            image: "https://www.socool.sg/wp-content/uploads/2023/09/Picture-53-1080x675.jpg"
+        },
         {
             id: 2,
             category: "electrical",
@@ -368,18 +399,75 @@
             image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
         },
         {
+            id: 2,
+            category: "electrical",
+            title: "Electrical Installation Services",
+            description: "Involves setting up new wiring, outlets, switches, lighting fixtures",
+            image: "https://png.pngtree.com/thumb_back/fh260/background/20240913/pngtree-electrician-working-on-electrical-panels-in-a-factory-image_16174281.jpg"
+        },
+         {
+            id: 2,
+            category: "electrical",
+            title: "Electrical Repair Services",
+            description: "Fixes faults like tripped breakers, flickering lights, faulty outlets",
+            image: "https://hometriangle.com/blogs/content/images/2024/08/hometriangle-blog-electrical-repairs.jpg"
+        },
+         {
+            id: 2,
+            category: "electrical",
+            title: "Electrical Upgrade Services",
+            description: "Modernizes outdated systems, such as upgrading breaker panels from 100A to 200A+,",
+            image: "https://ntelectrician.com/wp-content/uploads/2024/07/iStock-1469656864-e1721671595402.jpg"
+        },
+          {
+            id: 2,
+            category: "electrical",
+            title: "Frequent Circuit Breaker Tripping",
+            description: "Breakers trip repeatedly due to overloaded circuits, faulty wiring",
+            image: "https://carelabz.com/wp-content/uploads/2017/12/Circuit-Breakers.jpg"
+        },
+        {
             id: 3,
             category: "tesla",
-            title: "Tesla Wall Charger",
-            description: "Tesla Wall Connector installation in Jumeirah villa",
-            image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&auto=format&fit=crop&w-600&q=80"
+            title: "Universal Wall Connector",
+            description: "Similar to the standard Wall Connector but with dual NACS + J1772 plugs",
+            image: "https://media.istockphoto.com/id/1227575736/photo/tesla-electric-vehicles-awaiting-preparation-for-sale-tesla-ev-model-3-s-and-x-are-a-key-to-a.jpg?s=612x612&w=0&k=20&c=8IRdMx5xhXTG7m-bUqfh6n-OrGaofgeNgEINN3DWjso="
         },
         {
             id: 4,
             category: "plumbing",
             title: "Bathroom Renovation",
             description: "Complete plumbing overhaul for luxury bathroom",
-            image: "https://images.unsplash.com/photo-1584622781569-0584658f071d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            image: "https://plus.unsplash.com/premium_photo-1683134534707-f35641f4b2a2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+         {
+            id: 4,
+            category: "plumbing",
+            title: "Pipe Installation & Repiping Services",
+            description: "Sets up new water supply or drainage pipes, or replaces old/rusted ones",
+            image: "https://img.freepik.com/premium-photo/professional-plumber-with-water-tap-tools_106035-1719.jpg"
+        },
+         {
+            id: 4,
+            category: "plumbing",
+            title: "Fixture Installation & Repair Services",
+            description: "Installs or repairs bathroom/kitchen fixtures like faucets, showers, toilets, sinks, bathtubs",
+            image: "https://thumbs.dreamstime.com/b/plumbing-tools-kitchen-renovation-background-47973708.jpg"
+        },
+         {
+            id: 4,
+            category: "plumbing",
+            title: "Leak Detection & Repair Services",
+            description: "Finds and fixes hidden or visible leaks in pipes, faucets, toilets",
+            image: "https://goldcoastplumbingexperts.com.au/wp-content/uploads/2023/09/water-bursting-from-main-1080x675.jpg"
+        },
+       
+        {
+            id: 4,
+            category: "plumbing",
+            title: "Drain Cleaning & Unclogging Services",
+            description: "Removes blockages from sinks, toilets, showers, and main sewer lines using snaking",
+            image: "https://kingdomplumbing.ca/wp-content/uploads/2024/10/Chilliwack-Drain-Cleaning-Service-by-KPH-1024x682.jpg"
         },
         {
             id: 5,
@@ -395,12 +483,40 @@
             description: "Italian marble tiling for luxury villa entrance",
             image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
         },
+         {
+            id: 6,
+            category: "tiling",
+            title: "Floor Tiling",
+            description: "Involves laying tiles on horizontal surfaces like living room floors, kitchen floors",
+            image: "https://cdn.shopify.com/s/files/1/0518/0601/1582/files/Tiling_a_floor.jpg?v=1667837188"
+        },
+         {
+            id: 6,
+            category: "tiling",
+            title: "wall Tiling",
+            description: "Applies tiles to vertical surfaces such as bathroom walls, kitchen backsplashes,",
+            image: "https://wp.wallsandfloors.co.uk/wp-content/uploads/2017/07/tile-adhesive.jpg"
+        },
+        {
+            id: 6,
+            category: "tiling",
+            title: "Bathroom / Wet Area Tiling",
+            description: "Specializes in waterproof tiling for showers, bathtubs, toilet areas, and full bathrooms using water,",
+            image: "https://www.rubi.com/us/blog/wp-content/uploads/2022/05/tile-bathroom.jpg"
+        },
+         {
+            id: 6,
+            category: "tiling",
+            title: "Mosaic / Patterned Tiling",
+            description: "Involves installing small mosaic tiles, decorative borders, or intricate patterns (like herringbone, basketweave,",
+            image: "https://media.designcafe.com/wp-content/uploads/2022/03/30132954/mosaic-bathroom-tiles-in-a-pastel-pattern.jpg"
+        },
         {
             id: 7,
             category: "ac",
             title: "VRF System Maintenance",
             description: "Regular maintenance of VRF AC systems in hotel",
-            image: "https://images.unsplash.com/photo-1563291074-2bf8677ac0e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            image: "https://st2.depositphotos.com/1010613/6332/i/450/depositphotos_63322175-stock-photo-repairer-repairing-air-conditioner.jpg"
         },
         {
             id: 8,
@@ -414,29 +530,87 @@
             category: "tesla",
             title: "Dual Charger Installation",
             description: "Dual Tesla charger setup for luxury apartment building",
-            image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            image: "https://play-lh.googleusercontent.com/QwMEzDXpLRHOxxkBhLNqMMahSUrB3J3RiOznJvYbYwP1VW69VpyUxpq-ZdSgiVIVKEw=w526-h296-rw"
+        },
+         {
+            id: 9,
+            category: "tesla",
+            title: "Wall Connector",
+            description: "Hardwired home charging station (NACS plug) that installs on a wall for the fastest home charging,",
+            image: "https://www.rootelectric.com/wp-content/uploads/2023/05/tesla-home-Wall-Charger-Installation.jpg"
+        },
+          {
+            id: 9,
+            category: "tesla",
+            title: "Supercharger",
+            description: "Tesla's high-speed public DC fast-charging network (V3/V4 up to 250+ kW)",
+            image: "https://evbite.com/wp-content/uploads/2019/03/teslasupercharger.jpg"
+        },
+         {
+            id: 9,
+            category: "tesla",
+            title: "Mobile Connector",
+            description: "Portable charger that plugs into standard household outlets (120V for slow trickle charging or 240V",
+            image: "https://i.ebayimg.com/images/g/PcMAAOSwOiFj49l6/s-l1200.jpg"
+        },
+          {
+            id: 9,
+            category: "tesla",
+            title: "Dual-Port EV Charger",
+            description: "A modern Level 2 or DC fast charger with two connectors/ports (e.g., NACS + J1772 or dual CCS),",
+            image: "https://www.tesla.com/sites/default/files/images/charging/multiple-wall-connectors.jpg"
         },
         {
             id: 10,
             category: "plumbing",
             title: "Kitchen Plumbing",
             description: "Complete kitchen plumbing and fixture installation",
-            image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            image: "https://plus.unsplash.com/premium_photo-1683134517704-3cdd744faff8?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             id: 11,
             category: "glass",
             title: "Balcony Glass Railings",
             description: "Tempered glass railings for high-rise balcony",
-            image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            image: "https://static.vecteezy.com/system/resources/thumbnails/050/972/813/small/modern-balcony-with-potted-plants-and-a-glass-railing-ideal-for-depicting-urban-living-or-ecofriendly-design-photo.jpg"
+        },
+         {
+            id: 11,
+            category: "glass",
+            title: "Aluminium Sliding Glass Doors",
+            description: "Panels slide horizontally along tracks for easy operation, maximizing wide openings and unobstructed views",
+            image: "https://maitechnicalservices.com/wp-content/uploads/2025/01/aluminium-glass-doors-16-1024x638-1.jpg"
+        },
+         {
+            id: 11,
+            category: "glass",
+            title: "Aluminium Pivot Glass Doors",
+            description: "Pivot on a central or offset axis (top/bottom) for a dramatic, luxurious swing",
+            image: "https://www.raumplus.com/fileadmin/_processed_/4/5/csm_1580_5c5085e079.jpg"
+        },
+          {
+            id: 11,
+            category: "glass",
+            title: "Aluminium Hinged (French-Style) Glass Doors",
+            description: "Traditional swing-open doors on side hinges, often in pairs with full or partial glass for classic elegance",
+            image: "https://www.choicesonline.co.uk/choices-mk4-common-files/common-images/BEDFORD-GWAD-IMAGES/04/french-doors-bedford.jpg"
+        },
+         {
+            id: 11,
+            category: "glass",
+            title: "Fully Glazed Aluminium Pivot or Hinged Doors",
+            description: "Entirely glass-fronted with slim aluminium frames (minimal or no panels) for maximum transparency and modern minimalist look",
+            image: "https://evolveartisanal.com/wp-content/uploads/2023/04/Alugate-pivot-door-Welcome-1.jpg"
         },
         {
             id: 12,
             category: "tiling",
             title: "Swimming Pool Tiling",
             description: "Non-slip tile installation for swimming pool area",
-            image: "https://images.unsplash.com/photo-1560749003-f4b1e17e2dff?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            image: "https://apwbuildingservices.co.uk/wp-content/uploads/2016/04/swimming-pool-tiling-services-hertfordshire-1.jpg"
         }
+        
+        
     ];
     
     // Category names for display

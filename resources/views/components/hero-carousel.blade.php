@@ -31,165 +31,162 @@
         </div>
     </div>
 </section>
-
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Service data with separate background and content images
+document.addEventListener('DOMContentLoaded', () => {
+
+    /* =========================
+       DATA CONFIG
+    ========================= */
     const services = [
         {
-            id: 0,
             title: "Tesla Charger Installation in Dubai",
             badge: '<i class="fa fa-bolt me-2"></i> Certified Tesla Charger Installer',
             bgImage: "{{ asset('images/services/tesla2.jpeg') }}",
             ctaIcon: "fa-charging-station",
-            bgColor: "#990000b2"
+            bgOpacity: 0.5
         },
         {
-            id: 1,
             title: "Professional Plumbing Services",
             badge: '<i class="fa fa-wrench me-2"></i> Licensed Plumbing Contractor',
             bgImage: "{{ asset('images/services/plumber.jpeg') }}",
             ctaIcon: "fa-tools",
-            bgColor: "#990000ad"
+            bgOpacity: 0.4
         },
         {
-            id: 2,
             title: "Certified Electrical Services",
             badge: '<i class="fa fa-bolt me-2"></i> Master Electrician',
             bgImage: "{{ asset('images/bgimages/electrical.jpg') }}",
             ctaIcon: "fa-bolt",
-            bgColor: "#ff6b35b6"
+            bgOpacity: 0.5
+        },
+        {
+            title: "Professional Painting Services",
+            badge: '<i class="fa fa-paint-brush me-2"></i> Expert Painter',
+            bgImage: "{{ asset('images/bgimages/paintersbg.png') }}",
+            ctaIcon: "fa-paint-brush",
+            bgOpacity: 0.5
         }
     ];
 
-    // DOM Elements
-    const heroSection = document.getElementById('hero-slider');
-    const serviceBadge = document.getElementById('service-badge');
-    const serviceTitle = document.getElementById('service-title');
-    const ctaButton = document.getElementById('cta-button');
+    /* =========================
+       DOM CACHE
+    ========================= */
+    const hero = document.getElementById('hero-slider');
+    const badge = document.getElementById('service-badge');
+    const title = document.getElementById('service-title');
+    const ctaBtnIcon = document.querySelector('#cta-button i');
     const dots = document.querySelectorAll('.slider-dot');
-    const animatedElements = document.querySelectorAll('.animated-element');
+    const animated = document.querySelectorAll('.animated-element');
 
-    let currentSlide = 0;
-    let slideInterval;
+    let current = 0;
+    let interval = null;
     let isAnimating = false;
 
-    // Set initial slide immediately on page load
-    function initializeFirstSlide() {
-        const firstService = services[0];
-        heroSection.style.background = `linear-gradient(${firstService.bgColor}, #33333346), 
-                                       url('${firstService.bgImage}')`;
-        heroSection.style.backgroundSize = 'cover';
-        heroSection.style.backgroundPosition = 'center';
-        heroSection.style.backgroundAttachment = 'fixed';
-        
-        // Ensure content matches
-        serviceBadge.innerHTML = firstService.badge;
-        serviceTitle.textContent = firstService.title;
-        const ctaIcon = ctaButton.querySelector('i');
-        ctaIcon.className = `fa ${firstService.ctaIcon} me-2`;
-        dots[0].classList.add('active');
-    }
+    /* =========================
+       HELPERS
+    ========================= */
+    const getPrimaryRGBA = (opacity) => {
+        const hex = getComputedStyle(document.documentElement)
+            .getPropertyValue('--primary')
+            .trim() || '#27417f';
 
-    // Call initialization immediately
-    initializeFirstSlide();
+        const r = parseInt(hex.slice(1, 3), 16);
+        const g = parseInt(hex.slice(3, 5), 16);
+        const b = parseInt(hex.slice(5, 7), 16);
 
-    // Rest of your animation functions remain the same...
-    // Animation function
-    function animateOut(elements) {
-        return new Promise((resolve) => {
-            elements.forEach(element => {
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(20px)';
+        return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+    };
+
+    const setBackground = ({ bgImage, bgOpacity }) => {
+        hero.style.background = `
+            linear-gradient(${getPrimaryRGBA(bgOpacity)}, rgba(0,0,0,0.8)),
+            url('${bgImage}')
+        `;
+        hero.style.backgroundSize = 'cover';
+        hero.style.backgroundPosition = 'center';
+        hero.style.backgroundAttachment = 'fixed';
+    };
+
+    const animateOut = () =>
+        new Promise(resolve => {
+            animated.forEach(el => {
+                el.style.opacity = 0;
+                el.style.transform = 'translateY(20px)';
             });
-            
             setTimeout(resolve, 300);
         });
-    }
 
-    function animateIn(elements) {
-        elements.forEach((element, index) => {
+    const animateIn = () => {
+        animated.forEach((el, i) => {
             setTimeout(() => {
-                element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
-            }, index * 100);
+                el.style.opacity = 1;
+                el.style.transform = 'translateY(0)';
+            }, i * 100);
         });
-    }
+    };
 
-    // Update slide function
-    function updateSlide(slideIndex) {
-        if (isAnimating) return;
+    /* =========================
+       SLIDE UPDATE
+    ========================= */
+    const updateSlide = async (index) => {
+        if (isAnimating || index === current) return;
         isAnimating = true;
-        
-        const service = services[slideIndex];
-        
-        // Animate elements out
-        animateOut(animatedElements).then(() => {
-            // Update all content
-            serviceBadge.innerHTML = service.badge;
-            serviceTitle.textContent = service.title;
-            
-            // Update CTA button icon
-            const ctaIcon = ctaButton.querySelector('i');
-            ctaIcon.className = `fa ${service.ctaIcon} me-2`;
-            
-            // Update background
-            heroSection.style.background = `linear-gradient(${service.bgColor}, #33333346), 
-                                           url('${service.bgImage}')`;
-            heroSection.style.backgroundSize = 'cover';
-            heroSection.style.backgroundPosition = 'center';
-            heroSection.style.backgroundAttachment = 'fixed';
-            
-            // Update dots
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === slideIndex);
-            });
-            
-            // Animate elements in
-            animateIn(animatedElements);
-            
-            currentSlide = slideIndex;
-            isAnimating = false;
-        });
-    }
 
-    // Next slide function
-    function nextSlide() {
-        const nextIndex = (currentSlide + 1) % services.length;
-        updateSlide(nextIndex);
-    }
+        await animateOut();
 
-    // Auto-slide function
-    function startAutoSlide() {
-        slideInterval = setInterval(nextSlide, 7000);
-    }
+        const service = services[index];
 
-    // Stop auto-slide on hover
-    function stopAutoSlide() {
-        clearInterval(slideInterval);
-    }
+        badge.innerHTML = service.badge;
+        title.textContent = service.title;
+        ctaBtnIcon.className = `fa ${service.ctaIcon} me-2`;
+        setBackground(service);
 
-    // Dot click events
+        dots.forEach((dot, i) =>
+            dot.classList.toggle('active', i === index)
+        );
+
+        animateIn();
+        current = index;
+        isAnimating = false;
+    };
+
+    /* =========================
+       AUTO SLIDER
+    ========================= */
+    const startAuto = () => {
+        interval = setInterval(
+            () => updateSlide((current + 1) % services.length),
+            7000
+        );
+    };
+
+    const stopAuto = () => clearInterval(interval);
+
+    /* =========================
+       EVENTS
+    ========================= */
     dots.forEach(dot => {
-        dot.addEventListener('click', function() {
-            const slideIndex = parseInt(this.getAttribute('data-slide'));
-            if (slideIndex !== currentSlide) {
-                updateSlide(slideIndex);
-                stopAutoSlide();
-                startAutoSlide();
-            }
+        dot.addEventListener('click', () => {
+            updateSlide(Number(dot.dataset.slide));
+            stopAuto();
+            startAuto();
         });
     });
 
-    // Pause auto-slide on hover
-    heroSection.addEventListener('mouseenter', stopAutoSlide);
-    heroSection.addEventListener('mouseleave', startAutoSlide);
+    hero.addEventListener('mouseenter', stopAuto);
+    hero.addEventListener('mouseleave', startAuto);
 
-    // Initialize with initial animation
-    setTimeout(() => {
-        animateIn(animatedElements);
-    }, 100);
-    
-    startAutoSlide();
+    /* =========================
+       INIT
+    ========================= */
+    setBackground(services[0]);
+    badge.innerHTML = services[0].badge;
+    title.textContent = services[0].title;
+    ctaBtnIcon.className = `fa ${services[0].ctaIcon} me-2`;
+    dots[0].classList.add('active');
+
+    setTimeout(animateIn, 150);
+    startAuto();
+
 });
 </script>

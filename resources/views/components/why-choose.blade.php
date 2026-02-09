@@ -20,7 +20,7 @@
                         <div class="col-md-6">
                             <div class="d-flex align-items-start p-3 bg-gradient rounded-3">
                                 <div class=" bg-gradient bg-opacity-10 p-2 rounded-3 me-3">
-                                    <i class="fas fa-building text-danger fs-5"></i>
+                                    <i class="fas fa-building text-primary fs-5"></i>
                                 </div>
                                 <div class="bg-gradient">
                                     <h5 class="fw-bold mb-1">Residential & Commercial</h5>
@@ -31,7 +31,7 @@
                         <div class="col-md-6">
                             <div class="d-flex align-items-start p-3 bg-gradient rounded-3">
                                 <div class="bg-success bg-opacity-10 p-2 rounded-3 me-3">
-                                    <i class="fas fa-award text-danger fs-5"></i>
+                                    <i class="fas fa-award text-primary fs-5"></i>
                                 </div>
                                 <div class="bg-gradient">
                                     <h5 class="fw-bold mb-1">10+ Years Experience</h5>
@@ -42,7 +42,7 @@
                         <div class="col-md-6">
                             <div class="d-flex align-items-start p-3 bg-gradient rounded-3">
                                 <div class="bg-info bg-opacity-10 p-2 rounded-3 me-3">
-                                    <i class="fas fa-user-tie text-danger fs-5"></i>
+                                    <i class="fas fa-user-tie text-primary fs-5"></i>
                                 </div>
                                 <div class="bg-gradient">
                                     <h5 class="fw-bold mb-1">Licensed Professionals</h5>
@@ -53,7 +53,7 @@
                         <div class="col-md-6">
                             <div class="d-flex align-items-start p-3  bg-gradient rounded-3">
                                 <div class="bg-warning bg-opacity-10 p-2 rounded-3 me-3">
-                                    <i class="fas fa-handshake text-danger fs-5"></i>
+                                    <i class="fas fa-handshake text-primary fs-5"></i>
                                 </div>
                                 <div>
                                     <h5 class="fw-bold mb-1">Free Estimation</h5>

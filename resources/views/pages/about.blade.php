@@ -8,7 +8,7 @@
 
 <style>
 .about-hero {
-    background: linear-gradient(#990000, rgba(0, 87, 179, 0.73)), url('{{ asset("images/services/about-cover.png") }}');
+    background: linear-gradient(#990000, rgba(0, 87, 179, 0.73)), url('{{ asset("images/bgimages/banner.jpg") }}');
     background-size: cover;
     background-position: top;
     min-height: 80vh;

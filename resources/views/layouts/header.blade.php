@@ -13,17 +13,15 @@
         background-color: white !important;
         transition: all 0.3s ease;
     }
-    
+     /* Adjust body padding to prevent content from hiding under fixed navbar */
+    body {
+        padding-top: 85px !important;
+    }
     /* Navbar scrolled state */
     .ftco_navbar.scrolled {
         padding: 5px 0;
         min-height: 70px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    }
-    
-    /* Adjust body padding to prevent content from hiding under fixed navbar */
-    body {
-        padding-top: 85px !important;
     }
     
     .navbar-brand {
@@ -55,7 +53,7 @@
     
     /* Navbar links styling */
     .navbar-nav .nav-link {
-        color: var(--primary-dark) !important;
+        color: black !important;
         font-weight: 500;
         padding: 8px 15px !important;
         margin: 0 5px;
@@ -71,7 +69,7 @@
     
     .navbar-nav .nav-link.active {
         color: white !important;
-        background-color: var(--primary);
+        background-color:var(--primary);
     }
     
     /* Underline effect on hover using primary color */
@@ -82,7 +80,7 @@
         height: 2px;
         bottom: 0;
         left: 50%;
-        background-color: var(--primary);
+        background-color:var(--primary);
         transition: all 0.3s ease;
         transform: translateX(-50%);
     }
@@ -92,13 +90,13 @@
     }
     
     .navbar-toggler {
-        border: 1px solid rgba(153, 0, 0, 0.3);
+        border: 1px solid rgba(39, 65, 127, 0.3);
         padding: 5px 10px;
-        color: var(--primary);
+        color:var(--primary);
     }
     
     .navbar-toggler:focus {
-        box-shadow: 0 0 0 2px rgba(153, 0, 0, 0.25);
+        box-shadow: 0 0 0 2px rgba(39, 65, 127, 0.25);
     }
     
     /* Ensure navbar container aligns items properly */
@@ -141,7 +139,7 @@
     
     .services-dropdown .dropdown-item {
         padding: 12px 20px;
-        color: var(--primary-dark);
+        color: black;
         font-weight: 500;
         transition: all 0.3s ease;
         border-left: 3px solid transparent;
@@ -150,7 +148,7 @@
     }
     
     .services-dropdown .dropdown-item:hover {
-        background-color: rgba(153, 0, 0, 0.08);
+        background-color: rgba(39, 65, 127, 0.08);
         color: var(--primary);
         border-left-color: var(--primary);
         transform: translateX(5px);
@@ -184,7 +182,7 @@
     .services-dropdown .nav-link i {
         margin-left: 5px;
         transition: transform 0.3s ease;
-        color: var(--primary-dark);
+        color: black;
     }
     
     .services-dropdown:hover .nav-link i,
@@ -212,7 +210,7 @@
     
     /* Tesla charger item special styling */
     .services-dropdown .dropdown-item[href*="tesla-charging"] i {
-        color: var(--tesla-silver);
+        color: #6c757d;
     }
     
     .services-dropdown .dropdown-item[href*="tesla-charging"]:hover i {
@@ -270,7 +268,7 @@
             text-align: center;
             width: auto;
             padding: 10px 20px !important;
-            color: var(--primary-dark) !important;
+            color: black !important;
         }
         
         /* Mobile dropdown styling */
@@ -280,15 +278,15 @@
             width: 100% !important;
             margin-top: 5px;
             box-shadow: none;
-            border: 1px solid rgba(153, 0, 0, 0.1);
+            border: 1px solid rgba(39, 65, 127, 0.1);
             border-radius: 5px;
-            background-color: rgba(208, 209, 210, 0.05);
+            background-color: rgba(0, 0, 0, 0.02);
         }
         
         .services-dropdown .dropdown-item {
             padding: 10px 15px;
             text-align: left;
-            color: var(--primary-dark);
+            color: black;
         }
         
         /* Remove invisible gap on mobile */
@@ -337,7 +335,7 @@
     <div class="container">
         <!-- Logo on the left -->
         <a class="navbar-brand" href="/">
-            <img src="{{ asset('images/logo/redlogo.png') }}" alt="ONECALL TECHNICAL SERVICES" class="d-inline-block align-top">
+            <img src="{{ asset('images/logo/wobglogo.png') }}" alt="ONECALL TECHNICAL SERVICES" class="d-inline-block align-top">
         </a>
         
         <!-- Mobile menu button -->
@@ -404,11 +402,6 @@
 </nav>
 
 <script>
-    // Add CSS variables for the color scheme
-    document.documentElement.style.setProperty('--primary', '#990000');
-    document.documentElement.style.setProperty('--primary-dark', '#000000');
-    document.documentElement.style.setProperty('--tesla-silver', '#d0d1d2');
-    
     // Fix for dropdown hover gap and mobile behavior
     document.addEventListener('DOMContentLoaded', function() {
         const navbar = document.getElementById('ftco-navbar');

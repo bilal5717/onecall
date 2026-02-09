@@ -7,19 +7,10 @@
 @section('content')
 
 <style>
-    :root {
-        --ag-blue: #1e88e5;
-        --ag-light-blue: #e3f2fd;
-        --ag-green: #00acc1;
-        --ag-orange: #ff8a65;
-        --ag-dark: #263238;
-        --ag-silver: #78909c;
-    }
-
     /* Hero Section */
     .ag-hero {
-        background: linear-gradient(rgba(30, 136, 229, 0.9), rgba(30, 136, 229, 0.95)),
-                    url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+        background: linear-gradient(#990000, rgba(0, 87, 179, 0.73)),
+                    url('{{ asset("images/bgimages/banner.jpg") }}');
         background-size: cover;
         background-position: center;
         min-height: 400px;
@@ -50,43 +41,7 @@
     .work-process-card:hover {
         transform: translateY(-10px);
         box-shadow: 0 15px 30px rgba(30, 136, 229, 0.15);
-        border-color: var(--ag-blue);
-    }
-
-    .step-number {
-        width: 60px;
-        height: 60px;
-        background: var(--ag-blue);
-        color: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 700;
-        font-size: 1.5rem;
-        margin: 0 auto 20px;
-        position: relative;
-    }
-
-    .step-number::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border: 2px solid var(--ag-blue);
-        border-radius: 50%;
-        animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-        0% {
-            transform: scale(1);
-            opacity: 1;
-        }
-        100% {
-            transform: scale(1.3);
-            opacity: 0;
-        }
+        border-color: var(--primary);
     }
 
     /* Gallery Styles */
@@ -113,12 +68,12 @@
     }
 
     .gallery-tab.active {
-        color: var(--ag-blue);
-        border-bottom-color: var(--ag-blue);
+        color: var(--primary);
+        border-bottom-color: var(--primary);
     }
 
     .gallery-tab:hover:not(.active) {
-        color: var(--ag-blue);
+        color: var(--primary);
     }
 
     .gallery-grid {
@@ -181,7 +136,7 @@
 
     /* Stats Counter */
     .stats-section {
-        background: linear-gradient(135deg, var(--ag-blue), #0d47a1);
+        background: linear-gradient(135deg, var(--primary), #0d47a1);
         padding: 60px 0;
         color: white;
         border-radius: 15px;
@@ -205,56 +160,8 @@
         opacity: 0.9;
     }
 
-    /* Service Highlight Cards */
-    .service-highlight-card {
-        background: white;
-        border-radius: 12px;
-        padding: 30px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        border: 1px solid #e1e8ed;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        height: 100%;
-    }
-
-    .service-highlight-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(30, 136, 229, 0.15);
-        border-color: var(--ag-blue);
-    }
-
-    .service-icon-lg {
-        width: 70px;
-        height: 70px;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-    }
-
-    /* Service Details */
-    .service-detail-section {
-        padding: 60px 0;
-    }
-
-    .service-feature-list li {
-        padding: 8px 0;
-        border-bottom: 1px solid #eee;
-        display: flex;
-        align-items: center;
-    }
-
-    .service-feature-list li:last-child {
-        border-bottom: none;
-    }
-
-    .service-feature-list i {
-        color: var(--ag-green);
-        margin-right: 10px;
-        font-size: 0.9rem;
-    }
-
+  
+   
     /* Pricing Table */
     .pricing-card {
         background: white;
@@ -265,7 +172,7 @@
     }
 
     .pricing-card.popular {
-        border-color: var(--ag-blue);
+        border-color: var(--primary);
         box-shadow: 0 10px 30px rgba(30, 136, 229, 0.15);
         transform: scale(1.02);
     }
@@ -279,7 +186,7 @@
     .price-tag {
         font-size: 2.5rem;
         font-weight: 700;
-        color: var(--ag-blue);
+        color: var(--primary);
         line-height: 1;
     }
 
@@ -304,7 +211,7 @@
     }
 
     .material-item:hover {
-        border-color: var(--ag-blue);
+        border-color: var(--primary);
         box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         transform: translateY(-3px);
     }
@@ -414,11 +321,11 @@
                     Expert aluminum fabrication, glass installation, curtain walls, and shop front solutions for residential & commercial projects across Dubai.
                 </p>
                 <div class="d-flex flex-wrap gap-3">
-                    <a href="tel:+971500000000" class="btn btn-light btn-lg px-4">
-                        <i class="fa fa-phone me-2"></i> Emergency Glass Repair
+                    <a href="tel:+971500000000" class="btn btn-primary btn-lg px-4">
+                        <i class="fa fa-phone me-2"></i> Emergency AC Repair
                     </a>
                     <a href="#booking" class="btn btn-outline-light btn-lg px-4">
-                        <i class="fa fa-ruler-combined me-2"></i> Free Site Survey
+                        <i class="fa fa-calendar me-2"></i> Schedule Service
                     </a>
                 </div>
             </div>
@@ -430,10 +337,10 @@
 <section class="how-we-work-section">
     <div class="container">
         <div class="text-center mb-5">
-            <span class="badge bg-primary mb-3 px-3 py-2" style="background-color: var(--ag-blue) !important; font-size: 0.9rem;">
+             <span class="badge bg-primary mb-3 px-3 py-2" style="background-color: var(--primary) !important; font-size: 0.9rem;">
                 <i class="fa fa-cogs me-1"></i> Our Process
             </span>
-            <h2 class="fw-bold mb-3" style="color: var(--ag-dark);">HOW WE WORK</h2>
+            <h2 class="fw-bold mb-3" style="color: var(--primary-dark);">HOW WE WORK</h2>
             <p class="text-muted mx-auto" style="max-width: 700px;">
                 Our professional 5-step process ensures precision aluminum and glass work from consultation to completion
             </p>
@@ -443,7 +350,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="work-process-card">
                     <div class="step-number">1</div>
-                    <h4 class="fw-bold mb-3" style="color: var(--ag-dark);">Free Site Survey</h4>
+                    <h4 class="fw-bold mb-3" style="color: var(--primary-dark);">Free Site Survey</h4>
                     <p class="text-muted">
                         Expert assessment and measurements at your location. We analyze requirements and provide design recommendations.
                     </p>
@@ -456,7 +363,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="work-process-card">
                     <div class="step-number">2</div>
-                    <h4 class="fw-bold mb-3" style="color: var(--ag-dark);">Design & Quotation</h4>
+                    <h4 class="fw-bold mb-3" style="color: var(--primary-dark);">Design & Quotation</h4>
                     <p class="text-muted">
                         3D design visualization and transparent pricing. Choose from various aluminum profiles and glass types.
                     </p>
@@ -469,7 +376,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="work-process-card">
                     <div class="step-number">3</div>
-                    <h4 class="fw-bold mb-3" style="color: var(--ag-dark);">Fabrication</h4>
+                    <h4 class="fw-bold mb-3" style="color: var(--primary-dark);">Fabrication</h4>
                     <p class="text-muted">
                         Precision cutting and fabrication in our workshop using state-of-the-art CNC machines and tools.
                     </p>
@@ -482,7 +389,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="work-process-card">
                     <div class="step-number">4</div>
-                    <h4 class="fw-bold mb-3" style="color: var(--ag-dark);">Installation</h4>
+                    <h4 class="fw-bold mb-3" style="color: var(--primary-dark);">Installation</h4>
                     <p class="text-muted">
                         Professional installation by certified technicians. Clean workmanship with attention to detail and safety.
                     </p>
@@ -495,7 +402,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="work-process-card">
                     <div class="step-number">5</div>
-                    <h4 class="fw-bold mb-3" style="color: var(--ag-dark);">Quality Check</h4>
+                    <h4 class="fw-bold mb-3" style="color: var(--primary-dark);">Quality Check</h4>
                     <p class="text-muted">
                         Final inspection, sealant application, and functionality testing. Customer walkthrough and satisfaction guarantee.
                     </p>
@@ -506,8 +413,8 @@
             </div>
 
             <div class="col-md-6 col-lg-4">
-                <div class="work-process-card" style="background: linear-gradient(135deg, var(--ag-blue), #0d47a1); color: white;">
-                    <div class="step-number" style="background: white; color: var(--ag-blue);">✓</div>
+                <div class="work-process-card" style="background: linear-gradient(135deg, var(--primary), #0d47a1); color: white;">
+                    <div class="step-number" style="background: white; color: var(--primary);">✓</div>
                     <h4 class="fw-bold mb-3">Project Completion</h4>
                     <p>
                         Cleanup, documentation, and after-sales support. We ensure your complete satisfaction with the final result.
@@ -557,7 +464,7 @@
 <section class="ag-gallery-section">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="fw-bold mb-3" style="color: var(--ag-dark);">Our Aluminum & Glass Projects Gallery</h2>
+            <h2 class="fw-bold mb-3" style="color: var(--primary-dark);">Our Aluminum & Glass Projects Gallery</h2>
             <p class="text-muted">Browse our professional aluminum and glass installations across Dubai</p>
         </div>
 
@@ -617,10 +524,10 @@
 <section class="service-detail-section" style="background-color: #f8fafc;">
     <div class="container">
         <div class="text-center mb-5">
-            <span class="badge bg-primary mb-3 px-3 py-2" style="font-size: 0.9rem; background-color: var(--ag-blue) !important;">
+            <span class="badge bg-primary mb-3 px-3 py-2" style="font-size: 0.9rem; background-color: var(--primary) !important;">
                 <i class="fa fa-star me-1"></i> Expert Aluminum & Glass Services
             </span>
-            <h2 class="fw-bold mb-3" style="color: var(--ag-dark);">Comprehensive Aluminum & Glass Solutions</h2>
+            <h2 class="fw-bold mb-3" style="color: var(--primary-dark);">Comprehensive Aluminum & Glass Solutions</h2>
             <p class="text-muted mx-auto" style="max-width: 700px;">
                 From residential windows to commercial curtain walls, we provide professional aluminum and glass solutions for all projects in Dubai.
             </p>
@@ -630,10 +537,10 @@
             <!-- Window Installation -->
             <div class="col-md-6 col-lg-4">
                 <div class="service-highlight-card">
-                    <div class="service-icon-lg" style="background-color: var(--ag-blue);">
+                    <div class="service-icon-lg">
                         <i class="fa fa-window-restore text-white"></i>
                     </div>
-                    <h3 class="h4 fw-bold mb-3" style="color: var(--ag-dark);">Window Installation</h3>
+                    <h3 class="h4 fw-bold mb-3" style="color: var(--primary-dark);">Window Installation</h3>
                     <p class="text-muted mb-4">
                         Professional installation of aluminum windows including sliding, casement, tilt & turn, and fixed windows for residential and commercial spaces.
                     </p>
@@ -657,7 +564,7 @@
                     <div class="service-icon-lg" style="background-color: var(--ag-green);">
                         <i class="fa fa-border-all text-white"></i>
                     </div>
-                    <h3 class="h4 fw-bold mb-3" style="color: var(--ag-dark);">Glass Partitions</h3>
+                    <h3 class="h4 fw-bold mb-3" style="color: var(--primary-dark);">Glass Partitions</h3>
                     <p class="text-muted mb-4">
                         Modern glass partition systems for offices, showrooms, and residential spaces. Create open, light-filled environments with privacy options.
                     </p>
@@ -681,7 +588,7 @@
                     <div class="service-icon-lg" style="background-color: var(--ag-orange);">
                         <i class="fa fa-building text-white"></i>
                     </div>
-                    <h3 class="h4 fw-bold mb-3" style="color: var(--ag-dark);">Curtain Walls</h3>
+                    <h3 class="h4 fw-bold mb-3" style="color: var(--primary-dark);">Curtain Walls</h3>
                     <p class="text-muted mb-4">
                         Structural glazing and curtain wall systems for commercial buildings. Energy-efficient designs with thermal and acoustic insulation.
                     </p>
@@ -707,10 +614,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
-                <h2 class="fw-bold mb-4" style="color: var(--ag-dark);">Complete Aluminum & Glass Services in Dubai</h2>
+                <h2 class="fw-bold mb-4" style="color: var(--primary-dark);">Complete Aluminum & Glass Services in Dubai</h2>
                 
                 <div class="mb-5">
-                    <h3 class="h4 fw-bold mb-3" style="color: var(--ag-blue);">
+                    <h3 class="h4 fw-bold mb-3" style="color: var(--primary);">
                         <i class="fa fa-store me-2"></i> Shop Front & Showroom Works
                     </h3>
                     <p>Transform your retail space with stunning aluminum and glass shop fronts that attract customers and enhance brand visibility.</p>
@@ -735,7 +642,7 @@
                 </div>
 
                 <div class="mb-5">
-                    <h3 class="h4 fw-bold mb-3" style="color: var(--ag-blue);">
+                    <h3 class="h4 fw-bold mb-3" style="color: var(--primary);">
                         <i class="fa fa-door-open me-2"></i> Doors & Entrances
                     </h3>
                     <p>High-quality aluminum doors including sliding doors, folding doors, revolving doors, and entrance systems for residential and commercial properties.</p>
@@ -746,7 +653,7 @@
                 </div>
 
                 <div>
-                    <h3 class="h4 fw-bold mb-3" style="color: var(--ag-blue);">
+                    <h3 class="h4 fw-bold mb-3" style="color: var(--primary);">
                         <i class="fa fa-tint me-2"></i> Glass Repair & Replacement
                     </h3>
                     <p>Emergency glass repair services for broken windows, cracked glass, and damaged storefronts. Quick response across Dubai.</p>
@@ -782,13 +689,13 @@
                 <div class="sticky-top" style="top: 100px;">
                     <div class="pricing-card popular">
                         <div class="pricing-header text-center">
-                            <h4 class="fw-bold mb-3" style="color: var(--ag-dark);">Transparent Pricing</h4>
+                            <h4 class="fw-bold mb-3" style="color: var(--primary-dark);">Transparent Pricing</h4>
                             <div class="price-tag mb-2">AED 350<span style="font-size: 1rem; color: #666;">/sqm</span></div>
                             <p class="text-muted small">Starting price for standard windows</p>
                         </div>
                         
                         <div class="mb-4">
-                            <h5 class="fw-bold mb-3" style="color: var(--ag-dark);">Service Charges</h5>
+                            <h5 class="fw-bold mb-3" style="color: var(--primary-dark);">Service Charges</h5>
                             <div class="d-flex justify-content-between py-2 border-bottom">
                                 <span>Site Survey & Measurement</span>
                                 <span class="fw-bold text-success">FREE</span>
@@ -808,7 +715,7 @@
                         </div>
                         
                         <div class="mb-4">
-                            <h5 class="fw-bold mb-3" style="color: var(--ag-dark);">Material Options</h5>
+                            <h5 class="fw-bold mb-3" style="color: var(--primary-dark);">Material Options</h5>
                             <div class="d-flex justify-content-between py-2 border-bottom">
                                 <span>Standard Aluminum</span>
                                 <span class="fw-bold">AED 200/sqm</span>
@@ -838,7 +745,7 @@
 <section class="py-5" style="background-color: #f8fafc;">
     <div class="container">
         <div class="text-center mb-5">
-            <h3 class="fw-bold mb-3" style="color: var(--ag-dark);">Materials We Work With</h3>
+            <h3 class="fw-bold mb-3" style="color: var(--primary-dark);">Materials We Work With</h3>
             <p class="text-muted">Premium quality materials for durable and beautiful results</p>
         </div>
         
@@ -873,7 +780,7 @@
 <section id="commercial" class="py-5">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="fw-bold mb-3" style="color: var(--ag-dark);">Glass Types & Applications</h2>
+            <h2 class="fw-bold mb-3" style="color: var(--primary-dark);">Glass Types & Applications</h2>
             <p class="text-muted mx-auto" style="max-width: 700px;">Choose the right glass for your specific requirements</p>
         </div>
         
@@ -949,14 +856,14 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <h2 class="fw-bold mb-4" style="color: var(--ag-dark);">Book Aluminum & Glass Service</h2>
+                <h2 class="fw-bold mb-4" style="color: var(--primary-dark);">Book Aluminum & Glass Service</h2>
                 <p class="text-muted mb-4">
                     Fill out this form for a free site survey and detailed quotation. Our expert will contact you within 2 hours.
                 </p>
                 
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <div class="d-flex align-items-center p-3 rounded" style="background-color: var(--ag-light-blue);">
+                        <div class="d-flex align-items-center p-3 rounded" style="background-color: var(--tesla-silver);">
                             <div class="bg-primary p-2 rounded me-3">
                                 <i class="fa fa-ruler text-white"></i>
                             </div>
@@ -967,7 +874,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <div class="d-flex align-items-center p-3 rounded" style="background-color: var(--ag-light-blue);">
+                        <div class="d-flex align-items-center p-3 rounded" style="background-color: var(--tesla-silver);">
                             <div class="bg-success p-2 rounded me-3">
                                 <i class="fa fa-award text-white"></i>
                             </div>
@@ -994,7 +901,7 @@
             <div class="col-lg-6">
                 <div class="card border-0 shadow-sm">
                     <div class="card-body p-4">
-                        <h4 class="fw-bold mb-4" style="color: var(--ag-dark);">Project Inquiry Form</h4>
+                        <h4 class="fw-bold mb-4" style="color: var(--primary-dark);">Project Inquiry Form</h4>
                         <form id="agServiceForm">
                             <div class="row g-3">
                                 <div class="col-md-6">
@@ -1068,7 +975,7 @@
 <section class="py-5" style="background-color: #f8fafc;">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="fw-bold mb-3" style="color: var(--ag-dark);">Frequently Asked Questions</h2>
+            <h2 class="fw-bold mb-3" style="color: var(--primary-dark);">Frequently Asked Questions</h2>
             <p class="text-muted">Common questions about aluminum and glass works</p>
         </div>
         
@@ -1125,7 +1032,7 @@
 </section>
 
 <!-- Final CTA -->
-<section class="py-5" style="background: linear-gradient(135deg, var(--ag-blue), #0d47a1);">
+<section class="py-5" style="background: linear-gradient(135deg, var(--primary), #0d47a1);">
     <div class="container">
         <div class="text-center text-white">
             <h2 class="fw-bold mb-3">Ready for Professional Aluminum & Glass Works?</h2>
